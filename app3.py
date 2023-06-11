@@ -34,6 +34,15 @@ app = Flask(__name__)
 from models.m7.model import M7FaceAntiSpoofing
 from models.m6.model import M6FaceAntiSpoofing
 import os
+from flasgger import Swagger
+swagger = Swagger(app, template={
+ "swagger": "2.0",
+ "info": {
+  "title": "Inference",
+  "version": "1.0.0"
+ }
+})
+
 app.config['UPLOAD_FOLDER'] = 'static/uploads'
 
 from flask import Flask, request, redirect, jsonify
@@ -46,6 +55,20 @@ def allowed_file(filename):
 
 @app.route('/m7', methods=['POST'])
 def m7_upload_file():
+        """
+        Upload Image and get mask, bounded box coordinates and label     
+        ---
+        parameters:
+          - in: formData
+            name: file
+            type: file
+            required: true
+        responses:
+          200:
+            description: gets output
+          400:
+            description: input not supported
+        """
         # check if the post request has the file part
         if 'file' not in request.files:
                 resp = jsonify({'message' : 'No file part in the request'})
@@ -72,6 +95,20 @@ def m7_upload_file():
 
 @app.route('/m6', methods=['POST'])
 def m6_upload_file():
+        """
+        Upload Image and get mask, bounded box coordinates and label     
+        ---
+        parameters:
+          - in: formData
+            name: file
+            type: file
+            required: true
+        responses:
+          200:
+            description: gets output
+          400:
+            description: input not supported
+        """
         # check if the post request has the file part
         if 'file' not in request.files:
                 resp = jsonify({'message' : 'No file part in the request'})
@@ -125,6 +162,20 @@ def m2_upload_file():
 '''
 @app.route('/m1', methods=['POST'])
 def m1_upload_file():
+        """
+        Upload Image and get mask, bounded box coordinates and label     
+        ---
+        parameters:
+          - in: formData
+            name: file
+            type: file
+            required: true
+        responses:
+          200:
+            description: gets output
+          400:
+            description: input not supported
+        """
         # check if the post request has the file part
         if 'file' not in request.files:
                 resp = jsonify({'message' : 'No file part in the request'})
