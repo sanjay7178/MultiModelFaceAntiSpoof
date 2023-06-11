@@ -13,9 +13,10 @@ COPY requirements.txt requirements.txt
 RUN pip3 install --no-cache-dir  -r requirements.txt
 
 
-COPY /detector /app/detector
-COPY /models /app/models
-COPY app3.py /app/app3.py
+COPY detector /app/detector
+COPY models /app/models
+COPY flask_app/app.py /app/app3.py
+COPY wsgi.py /app/wsgi.py
 COPY .dockerignore /app/.dockerignore
 # COPY  . /app
 EXPOSE 5000
