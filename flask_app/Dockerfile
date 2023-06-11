@@ -11,13 +11,11 @@ WORKDIR /flask_app
 COPY requirements.txt ./requirements.txt
 COPY requirements.txt requirements.txt
 RUN pip3 install --no-cache-dir  -r requirements.txt
-
-
-COPY detector /flask_app/detector
-COPY models /flask_app/models
-COPY flask_app/app.py /flask_app/app3.py
+COPY static /flask_app/static/
+COPY detector /flask_app/detector/
+COPY models /flask_app/models/
+COPY app.py /flask_app/app.py
 COPY wsgi.py /flask_app/wsgi.py
-COPY .dockerignore /flask_app/.dockerignore
 # COPY  . /app
 # EXPOSE 5000
 # CMD ["python3", "app3.py"]

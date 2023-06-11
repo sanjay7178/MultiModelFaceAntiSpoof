@@ -1,5 +1,0 @@
-# Exclude __pycache__ directory
-**/__pycache__/
-
-# Exclude .pyc files
-**/*.pyc
