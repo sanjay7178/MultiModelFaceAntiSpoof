@@ -5,12 +5,12 @@
   🚀 MultiModelFaceAntispoof utilizes Multiple Open Source Spoofing models for Inference via Flask API. It integrates multiple face anti-spoofing models from GitHub. Contributions, corrections, and requests are welcomed on GitHub.
 </p>
 <p align="center">
-  <a href="https://github.com/sanjay7178/actions/checkout/actions/runs/">
-    <img src="https://img.shields.io/github/sanjay7178/workflow/status/actions/checkout/CI?logo=github&label=tests" alt="Build status">
+  <a href="https://github.com/actions/checkout/actions/runs/123456789">
+    <img src="https://img.shields.io/github/workflow/status/actions/checkout/CI?logo=github&label=tests" alt="Build status">
   </a>
   
-  <a href="https://pypi.org/project/[flasgger/">
-    <img src="https://img.shields.io/pypi/v/flasgger?logo=python&logoColor=white" alt="PyPI version">
+  <a href="https://pypi.org/project/[PACKAGE-NAME]/">
+    <img src="https://img.shields.io/pypi/v/[PACKAGE-NAME]?logo=python&logoColor=white" alt="PyPI version">
   </a>
 
   <img src="https://img.shields.io/badge/Docker%20Passing-2496ED?logo=docker&logoColor=white" alt="Docker Passing">
@@ -32,6 +32,8 @@
   <img src="https://img.shields.io/badge/Gunicorn-37404F?logo=gunicorn&logoColor=white" alt="Gunicorn">
 
   <img src="https://img.shields.io/badge/Nginx-009639?logo=nginx&logoColor=white" alt="Nginx">
+
+  <img src="https://img.shields.io/badge/Git%20LFS-F54D27?logo=git-lfs&logoColor=white" alt="Git LFS">
 </p>
 
 MultiModelFaceAntiSpoof is [available on Docker Hub](https://hub.docker.com/r/sanjay7178/facespoof).
