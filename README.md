@@ -33,6 +33,7 @@
   <img src="https://img.shields.io/badge/Nginx-009639?logo=nginx&logoColor=white" alt="Nginx">
 
   <img src="https://img.shields.io/badge/Git%20LFS-F54D27?logo=git-lfs&logoColor=white" alt="Git LFS">
+  
 </p>
 
 MultiModelFaceAntiSpoof is [available on Docker Hub](https://hub.docker.com/r/sanjay7178/facespoof).
