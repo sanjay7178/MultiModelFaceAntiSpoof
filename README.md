@@ -9,8 +9,8 @@
     <img src="https://img.shields.io/github/workflow/status/actions/checkout/CI?logo=github&label=tests" alt="Build status">
   </a>
   
-  <a href="https://pypi.org/project/[PACKAGE-NAME]/">
-    <img src="https://img.shields.io/pypi/v/[PACKAGE-NAME]?logo=python&logoColor=white" alt="PyPI version">
+  <a href="https://pypi.org/project/flasgger/">
+    <img src="https://img.shields.io/pypi/v/flasgger?logo=python&logoColor=white" alt="PyPI version">
   </a>
 
   <img src="https://img.shields.io/badge/Docker%20Passing-2496ED?logo=docker&logoColor=white" alt="Docker Passing">
