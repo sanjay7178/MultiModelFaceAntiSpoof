@@ -1,4 +1,5 @@
-# FaceAntiSpoofing
+# MultiModelFaceAntiSpoof
+
 Multiple face anti-spoofing models from github.
 There are six models to detect spoof.
 
