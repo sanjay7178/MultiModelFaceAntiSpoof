@@ -1,20 +1,42 @@
-<p align="center">
-<!-- <picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/assets/readme/simpleicons-white.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/simpleicons.svg"><img src="https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/simpleicons.svg" alt="Simple Icons" width=70></picture> -->
+
 <h3 align="center">MultiModelFaceAntiSpoof</h3>
-<p align="center">
-MultiModelFaceAntispoof using Multiple Open Source Spoofing models to Inference via Flask API. Multiple face anti-spoofing models from github.
-There are six models to detect spoof.Contributions, corrections & requests can be made on GitHub.</p>
-</p>
 
 <p align="center">
-<a href="https://github.com/simple-icons/simple-icons/actions?query=workflow%3AVerify+branch%3Adevelop"><img src="https://img.shields.io/github/actions/workflow/status/simple-icons/simple-icons/verify.yml?branch=develop&logo=github&label=tests" alt="Build status"/></a>
-<a href="https://www.npmjs.com/package/simple-icons"><img src="https://img.shields.io/npm/v/simple-icons.svg?logo=npm" alt="NPM version"/></a>
-<a href="https://packagist.org/packages/simple-icons/simple-icons"><img src="https://img.shields.io/packagist/v/simple-icons/simple-icons?logo=packagist&logoColor=white" alt="Build status"/></a>
+  🚀 MultiModelFaceAntispoof utilizes Multiple Open Source Spoofing models for Inference via Flask API. It integrates multiple face anti-spoofing models from GitHub. Contributions, corrections, and requests are welcomed on GitHub.
 </p>
 <p align="center">
-<a href="https://simpleicons.org"><img src="https://img.shields.io/badge/dynamic/json?color=informational&label=icons&prefix=%20&logo=simpleicons&query=%24.icons.length&url=https%3A%2F%2Fraw.githubusercontent.com%2Fsimple-icons%2Fsimple-icons%2Fdevelop%2F_data%2Fsimple-icons.json" alt="Number of icons currently in the library"/></a>
-<a href="https://opencollective.com/simple-icons"><img src="https://img.shields.io/opencollective/all/simple-icons?logo=opencollective" alt="Backers and sponsors on Open Collective"/></a>
+  <a href="https://github.com/sanjay7178/actions/checkout/actions/runs/">
+    <img src="https://img.shields.io/github/sanjay7178/workflow/status/actions/checkout/CI?logo=github&label=tests" alt="Build status">
+  </a>
+  
+  <a href="https://pypi.org/project/[flasgger/">
+    <img src="https://img.shields.io/pypi/v/flasgger?logo=python&logoColor=white" alt="PyPI version">
+  </a>
+
+  <img src="https://img.shields.io/badge/Docker%20Passing-2496ED?logo=docker&logoColor=white" alt="Docker Passing">
+
+  <img src="https://img.shields.io/badge/GitHub%20Actions-2088FF?logo=github%20actions&logoColor=white" alt="GitHub Actions">
+
+  <img src="https://img.shields.io/badge/Docker%20Compose-2496ED?logo=docker&logoColor=white" alt="Docker Compose">
+
+  <img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white" alt="Python">
+
+  <img src="https://img.shields.io/badge/TensorFlow-FF6F00?logo=tensorflow&logoColor=white" alt="TensorFlow">
+
+  <img src="https://img.shields.io/badge/PyTorch-EE4C2C?logo=pytorch&logoColor=white" alt="PyTorch">
+
+  <img src="https://img.shields.io/badge/MTCNN-N%2FA" alt="MTCNN">
+
+  <img src="https://img.shields.io/badge/Flask-000000?logo=flask&logoColor=white" alt="Flask">
+
+  <img src="https://img.shields.io/badge/Gunicorn-37404F?logo=gunicorn&logoColor=white" alt="Gunicorn">
+
+  <img src="https://img.shields.io/badge/Nginx-009639?logo=nginx&logoColor=white" alt="Nginx">
 </p>
+
+MultiModelFaceAntiSpoof is [available on Docker Hub](https://hub.docker.com/r/sanjay7178/facespoof).
+
+
 
 ### Installation
 Setup
@@ -31,35 +53,34 @@ docker-compose  up  --build -d
 
 ### Try Out on Google Colab
 <div>
-    <a href="https://colab.research.google.com/drive/1M3GIDJVXQk0LYTxvXoOK8t6v3CxZUk-6?usp=sharing"><img src="https://colab.research.google.com/assets/colab-badge.svg" target='_blank' alt="Open In Colab">
+  <a href="https://colab.research.google.com/drive/1M3GIDJVXQk0LYTxvXoOK8t6v3CxZUk-6?usp=sharing">
+    <img src="https://colab.research.google.com/assets/colab-badge.svg" target="_blank" alt="Open In Colab">
+  </a>
 </div>
-  
+
 <br>
-  
-1. M1: https://github.com/zeusees/HyperFAS
-2. M2: https://github.com/emadeldeen24/face-anti-spoofing
-3. M3: https://github.com/Davidzhangyuanhan/CelebA-Spoof
-4. M4: https://github.com/JinghuiZhou/awesome_face_antispoofing
-5. M5: Simple CNN model. I have trained this model from scratch.
-6. M6: https://github.com/minivision-ai/Silent-Face-Anti-Spoofing
-7. M7: https://github.com/Saiyam26/Face-Anti-Spoofing-using-DeePixBiS
- 
-  
+
+🔬 Spoof Detection Models:
+
+1. [M1: HyperFAS](https://github.com/zeusees/HyperFAS)
+2. [M2: Face Anti-Spoofing](https://github.com/emadeldeen24/face-anti-spoofing)
+3. [M3: CelebA-Spoof](https://github.com/Davidzhangyuanhan/CelebA-Spoof)
+4. [M4: Awesome Face Antispoofing](https://github.com/JinghuiZhou/awesome_face_antispoofing)
+5. M5: Simple CNN model (trained from scratch)
+6. [M6: Silent-Face-Anti-Spoofing](https://github.com/minivision-ai/Silent-Face-Anti-Spoofing)
+7. [M7: Face-Anti-Spoofing-using-DeePixBiS](https://github.com/Saiyam26/Face-Anti-Spoofing-using-DeePixBiS)
+8. [M8: FaceAntiSpoofing](https://github.com/pourfard/FaceAntiSpoofing)
+
 ### Requirements:
+- Python 3.6 or higher
+- Upgrade pip: `pip3 install pip --upgrade`
+- Install required packages: `pip3 install -r requirements.txt`
 
-`python ==> 3.6`
+### Usage:
+- Run the test script: `python3 test.py`
 
-`pip3 install pip --upgrade`
+### TODO:
+1. Add more spoof detection models
 
-`pip3 install -r requirements.txt`
-
-Usage:
-
-`python3 test.py`
-
-
-TODO:
-1. ?
-  
-# Credits and Source
-https://github.com/pourfard/FaceAntiSpoofing
+## Credits and Source
+Original repository: [FaceAntiSpoofing](https://github.com/pourfard/FaceAntiSpoofing)
