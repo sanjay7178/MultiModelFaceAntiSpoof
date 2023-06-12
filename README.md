@@ -16,13 +16,20 @@ There are six models to detect spoof.Contributions, corrections & requests can b
 <a href="https://opencollective.com/simple-icons"><img src="https://img.shields.io/opencollective/all/simple-icons?logo=opencollective" alt="Backers and sponsors on Open Collective"/></a>
 </p>
 
-### MultiModelFaceAntiSpoof
+### Installation
+Setup
+```
+sudo apt install  git-lfs -y
+git  clone https://github.com/sanjay7178/MultiModelFaceAntiSpoof
+cd MultiModelFaceAntiSpoof
+git-lfs pull
+```
+Inference
+```
+docker-compose  up  --build -d
+```
 
-Multiple face anti-spoofing models from github.
-There are six models to detect spoof.
-
-
-# Try Out on Google Colab
+### Try Out on Google Colab
 <div>
     <a href="https://colab.research.google.com/drive/1M3GIDJVXQk0LYTxvXoOK8t6v3CxZUk-6?usp=sharing"><img src="https://colab.research.google.com/assets/colab-badge.svg" target='_blank' alt="Open In Colab">
 </div>
@@ -38,7 +45,7 @@ There are six models to detect spoof.
 7. M7: https://github.com/Saiyam26/Face-Anti-Spoofing-using-DeePixBiS
  
   
-Requirements:
+### Requirements:
 
 `python ==> 3.6`
 
