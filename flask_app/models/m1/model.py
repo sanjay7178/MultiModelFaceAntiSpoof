@@ -6,7 +6,7 @@ import numpy as np
 
 class M1FaceAntiSpoofing(FaceAntiSpoofingInterface):
     def __init__(self):
-        self.model = load_model("models/m1/files/fas.h5")
+        self.model = load_model("models/m1/files/fas.h5", compile=False)
 
     def get_real_score(self, bgr, face_bbox):
         crop = bgr[face_bbox[1]:face_bbox[3], face_bbox[0]:face_bbox[2], :]
