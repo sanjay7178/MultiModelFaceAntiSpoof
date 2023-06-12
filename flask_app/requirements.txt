@@ -19,7 +19,7 @@ torch==2.0.1
 flasgger==0.9.7b2
 torchvision==0.15.2
 gunicorn
-
+mtcnn
 nvidia-cublas-cu11==11.10.3.66
 nvidia-cuda-cupti-cu11==11.7.101
 nvidia-cuda-nvrtc-cu11==11.7.99
