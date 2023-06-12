@@ -1,6 +1,5 @@
 
 <h3 align="center">MultiModelFaceAntiSpoof</h3>
-
 <p align="center">
   🚀 MultiModelFaceAntispoof utilizes Multiple Open Source Spoofing models for Inference via Flask API. It integrates multiple face anti-spoofing models from GitHub. Contributions, corrections, and requests are welcomed on GitHub.
 </p>
