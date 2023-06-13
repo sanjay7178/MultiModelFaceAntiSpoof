@@ -339,7 +339,7 @@ class MydenseNet121(BasicModule):
 class MydenseNet161(BasicModule):
     def __init__(self):
         super(MydenseNet161, self).__init__()
-        model = models.densenet161(pretrained = True)
+        model = models.densenet161(weights='DenseNet161_Weights.IMAGENET1K_V1')
         self.resnet_lay=nn.Sequential(*list(model.children())[:-1])
         self.conv1_lay = nn.Conv2d(2208, 512, kernel_size = (1,1),stride=(1,1))
         self.relu1_lay = nn.ReLU(inplace = True)
