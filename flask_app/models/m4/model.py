@@ -1,15 +1,15 @@
-from models.FaceAntiSpoofing
-import FaceAntiSpoofingInterface import cv2 
+from models.FaceAntiSpoofing import FaceAntiSpoofingInterface 
+import cv2 
 import numpy as np 
 import mediapipe as mp 
-from models.m4.m4models 
-import MyresNet34 
+from models.m4.m4models import MyresNet34 
 import tensorflow as tf
 
 class M4FaceAntiSpoofing(FaceAntiSpoofingInterface):
   def __init__(self): 
     self.mp_drawing = mp.solutions.drawing_utils 
-    self.mp_face_mesh = mp.solutions.face_mesh MODEL_PATH = "models/m4/files/5.pth" 
+    self.mp_face_mesh = mp.solutions.face_mesh 
+    MODEL_PATH = "models/m4/files/5.pth" 
     self.model = MyresNet34().eval() 
     self.model.load(MODEL_PATH) 
     self.model.train(False) 
