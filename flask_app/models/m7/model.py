@@ -13,7 +13,7 @@ from torchvision import transforms
 class DeePixBiS(nn.Module):
     def __init__(self, pretrained=True):
         super().__init__()
-        dense = models.densenet161(pretrained=pretrained)
+        dense = models.densenet161('weights=DenseNet161_Weights.IMAGENET1K_V1')
         features = list(dense.features.children())
         self.enc = nn.Sequential(*features[:8])
         self.dec = nn.Conv2d(384, 1, kernel_size=1, stride=1, padding=0)
