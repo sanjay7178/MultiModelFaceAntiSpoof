@@ -6,11 +6,13 @@ from models.m7.model import M7FaceAntiSpoofing
 from models.m6.model import M6FaceAntiSpoofing
 import os
 from models.m1.model import M1FaceAntiSpoofing
+from models.m2.model import M2FaceAntiSpoofing
+from models.m3.model import M3FaceAntiSpoofing
 # from m6 import predict_one_img
 import warnings
 from detector.cv_face_detector.model import MTCNNFaceDetector
 face_detector = MTCNNFaceDetector()
-spoof_detectors = [M7FaceAntiSpoofing(),M6FaceAntiSpoofing(),M1FaceAntiSpoofing()]
+spoof_detectors = [M7FaceAntiSpoofing(),M6FaceAntiSpoofing(),M1FaceAntiSpoofing(),M2FaceAntiSpoofing(),M3FaceAntiSpoofing()]
 import urllib.request
 import cv2
 
@@ -133,6 +135,48 @@ def m6_upload_file():
                 resp.status_code = 400
                 return resp
 
+@app.route('/m3', methods=['POST'])
+def m3_upload_file():
+        """
+        Upload Image and get mask, bounded box coordinates and label     
+        ---
+        parameters:
+          - in: formData
+            name: file
+            type: file
+            required: true
+        responses:
+          200:
+            description: gets output
+          400:
+            description: input not supported
+        """
+        # check if the post request has the file part        
+        # check if the post request has the file part
+        if 'file' not in request.files:
+                resp = jsonify({'message' : 'No file part in the request'})
+                resp.status_code = 400
+                return resp
+        file = request.files['file']
+        if file.filename == '':
+                resp = jsonify({'message' : 'No file selected for uploading'})
+                resp.status_code = 400
+                return resp
+        if file and allowed_file(file.filename):
+                filename = secure_filename(file.filename)
+                file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+                print(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+                x ,y  = predict_one_img(os.path.join(app.config['UPLOAD_FOLDER'], filename), spoof_detectors[4])
+                print(x)
+                resp = jsonify({'message' : 'File successfully uploaded', 'result': x, 'real_score':y}  )
+                resp.status_code = 201
+                return resp
+        else:
+                resp = jsonify({'message' : 'Allowed file types are txt, pdf, png, jpg, jpeg, gif'})
+                resp.status_code = 400
+                return resp
+
+
 @app.route('/m2', methods=['POST'])
 def m2_upload_file():
         """
@@ -164,7 +208,7 @@ def m2_upload_file():
                 filename = secure_filename(file.filename)
                 file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
                 print(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-                x ,y  = predict_one_img(os.path.join(app.config['UPLOAD_FOLDER'], filename), spoof_detectors[2])
+                x ,y  = predict_one_img(os.path.join(app.config['UPLOAD_FOLDER'], filename), spoof_detectors[3])
                 print(x)
                 resp = jsonify({'message' : 'File successfully uploaded', 'result': x, 'real_score':y}  )
                 resp.status_code = 201
