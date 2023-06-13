@@ -1,7 +1,7 @@
 from models.FaceAntiSpoofing import FaceAntiSpoofingInterface
 import cv2
 import numpy as np
-from keras.models import model_from_yaml
+from keras.models import model_from_json
 #from keras.preprocessing.image import img_to_array
 from tensorflow.keras.utils import img_to_array
 
