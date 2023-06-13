@@ -132,9 +132,24 @@ def m6_upload_file():
                 resp = jsonify({'message' : 'Allowed file types are txt, pdf, png, jpg, jpeg, gif'})
                 resp.status_code = 400
                 return resp
-'''
+
 @app.route('/m2', methods=['POST'])
 def m2_upload_file():
+        """
+        Upload Image and get mask, bounded box coordinates and label     
+        ---
+        parameters:
+          - in: formData
+            name: file
+            type: file
+            required: true
+        responses:
+          200:
+            description: gets output
+          400:
+            description: input not supported
+        """
+        # check if the post request has the file part        
         # check if the post request has the file part
         if 'file' not in request.files:
                 resp = jsonify({'message' : 'No file part in the request'})
@@ -159,7 +174,7 @@ def m2_upload_file():
                 resp.status_code = 400
                 return resp
 
-'''
+
 @app.route('/m1', methods=['POST'])
 def m1_upload_file():
         """
