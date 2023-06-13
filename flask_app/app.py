@@ -8,12 +8,12 @@ import os
 from models.m1.model import M1FaceAntiSpoofing
 from models.m2.model import M2FaceAntiSpoofing
 from models.m3.model import M3FaceAntiSpoofing
-from models.m4.model import M4FaceAntiSpoofing
+# from models.m4.model import M4FaceAntiSpoofing
 # from m6 import predict_one_img
 import warnings
 from detector.cv_face_detector.model import MTCNNFaceDetector
 face_detector = MTCNNFaceDetector()
-spoof_detectors = [M7FaceAntiSpoofing(),M6FaceAntiSpoofing(),M1FaceAntiSpoofing(),M2FaceAntiSpoofing(),M3FaceAntiSpoofing(), M4FaceAntiSpoofing()]
+spoof_detectors = [M7FaceAntiSpoofing(),M6FaceAntiSpoofing(),M1FaceAntiSpoofing(),M2FaceAntiSpoofing(),M3FaceAntiSpoofing()]
 import urllib.request
 import cv2
 
