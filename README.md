@@ -38,7 +38,8 @@
 
 MultiModelFaceAntiSpoof is [available on Docker Hub](https://hub.docker.com/r/sanjay7178/facespoof).
 
-
+### Architecture
+![Architecture](https://github.com/sanjay7178/MultiModelFaceAntiSpoof/blob/65a13419caaf7db5a571584133fab9b8b8efe408/screenshots/architecture.png)
 
 ### Installation
 Setup
